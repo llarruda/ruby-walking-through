@@ -3,7 +3,7 @@
 #  Ruby Basic Syntax - samples of I/O operations and basic string usage
 #
 #  created by @llarruda
-#  Sat 18 Apr 2020 11:05:12
+#  Sat 18 Apr 2020 11:05:12 AM -03
 #
 
 puts 'Enter a integer: '
