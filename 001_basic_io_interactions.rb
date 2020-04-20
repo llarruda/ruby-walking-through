@@ -13,3 +13,6 @@ print 'Enter your name: '
 name = gets.chomp
 
 puts "Your journey with Ruby, #{name}, certainly, will be more fun!"
+
+# parentheses are optional
+printf("Number %5.2f\nString %s", 2.75, 'hey')
