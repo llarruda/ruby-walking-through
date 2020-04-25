@@ -14,6 +14,24 @@ name = gets.chomp
 
 puts "Your journey with Ruby, #{name}, certainly, will be more fun!"
 
+# concatenation
+stack = 'Ruby'
+
+puts stack
+puts stack.object_id
+
+# creates a new object
+stack = stack + 'onRails'
+
+puts stack
+puts stack.object_id
+
+# shovel operator doesn't create a new object
+stack = stack << 'changed the world'
+
+puts stack
+puts stack.object_id
+
 # parentheses are optional
 printf("Number: %5.2f\nString: %s\n", 2.75, 'hey')
 
@@ -25,4 +43,4 @@ print 'Enter your salary: '
 # for adjustments made by ruby the conversion is called coercion
 salary = gets.to_f
 
-puts "Your credit card limit can be up to " + (salary * 0.3).to_s
+printf("%s %5.2f", "Your credit card limit can be up to ", (salary * 0.3))
