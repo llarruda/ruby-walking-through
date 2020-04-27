@@ -16,6 +16,7 @@ require_relative 'classes/motor'
 require_relative 'classes/shopping_cart'
 require_relative 'classes/airplane'
 require_relative 'classes/animal_keep_track'
+require_relative 'classes/working_with_time'
 
 # instance of Person class
 person1 = Person.new
@@ -79,3 +80,12 @@ new_collection = AnimalKeepTrack.species = %w(frog snake alligator)
 new_collection.each do |specie|
   puts specie
 end
+
+# instance of WorkingWithTime
+today = WorkingWithTime.new
+tomorrow = today.add_days(1)
+puts tomorrow
+tomorrow
+
+fulldate = today.fulldate_unabbreviated(tomorrow)
+puts fulldate
