@@ -6,6 +6,7 @@
 #  Mon 25 Apr 2020 04:21:9 PM -03
 #
 
+require_relative 'modules/nameable'
 require_relative 'classes/person'
 require_relative 'classes/animal'
 require_relative 'classes/automobile'
