@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 #
-# Ruby Basic Syntac - Passing arguments from command-line
+# Ruby Basic Syntax - Passing arguments from command-line
 #
 #  created by @llarruda
 #  Mon 20 Apr 2020 06:47:01 PM -03
@@ -15,5 +15,5 @@ puts 'ARGV size: ' + ARGV.size.to_s
 # split args with splat operator (*)
 first_arg, *rest_arg = ARGV
 
-puts first_arg
-puts rest_arg
+puts 'first arg: ' + first_arg
+puts 'rest args: ' + rest_arg.to_s
