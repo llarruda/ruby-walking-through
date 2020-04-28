@@ -10,7 +10,12 @@ class Radio
   attr_reader :volume
 
   def volume=(value)
-    return if value < 1 || value > 10
+    # approach to use raise exceptions instead return and jump out method
+    # check the call to this method in ../init.rb
+    # return if value < 1 || value > 10
+    if value < 1 || value > 10
+      raise 'Negative volume or to loud!'
+    end
     @volume = value
   end
 

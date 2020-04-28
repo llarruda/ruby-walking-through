@@ -48,12 +48,17 @@ tomato.color = 'red'
 puts "#{tomato.name} is #{tomato.color}"
 
 #instance of Radio
-radio4 = Radio.new
-# number out of range 1..10 dosen't pass by method validation
-radio4.volume = 15
-# to set something out of this range just by crank_it_up method
-radio4.crank_it_up
-puts radio4.volume_status
+begin
+  radio4 = Radio.new
+  # number out of range 1..10 dosen't pass by method validation
+  # must raise and exception defined on volume method
+  radio4.volume = 15
+  # to set something out of this range just by crank_it_up method
+  radio4.crank_it_up
+  puts radio4.volume_status
+rescue RuntimeError => e
+  puts e.message
+end
 
 # instance of Motor class
 v8 = Motor.new({noise: 'Vrramm!'})
