@@ -6,6 +6,7 @@
 #
 #
 
+# module when wrapping a class create a namespace
 module Spark
   class Date
     attr_accessor :date, :location
