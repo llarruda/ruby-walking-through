@@ -6,6 +6,8 @@
 #
 #
 
+require_relative 'custom_exceptions/too_loud_error'
+
 class Radio
   attr_reader :volume
 
@@ -14,7 +16,7 @@ class Radio
     # check the call to this method in ../init.rb
     # return if value < 1 || value > 10
     if value < 1 || value > 10
-      raise 'Negative volume or to loud!'
+      raise TooLoudError
     end
     @volume = value
   end

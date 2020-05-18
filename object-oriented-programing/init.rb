@@ -56,7 +56,7 @@ begin
   # to set something out of this range just by crank_it_up method
   radio4.crank_it_up
   puts radio4.volume_status
-rescue RuntimeError => e
+rescue TooLoudError => e
   puts e.message
 end
 
