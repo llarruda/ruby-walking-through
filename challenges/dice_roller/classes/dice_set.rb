@@ -6,31 +6,32 @@
 #
 #
 
+require_relative 'dice'
+
 class DiceSet
 
-  attr_accessor :number_dices, :quantity
+  attr_accessor :dices_number
 
-  def initialize(number_dices)
-    @number_dices = number_dices
-    # empty instance variable just for iterate through
-    @quantity = Array.new(self.number_dices)
+  def initialize(dices_number)
+    @dices_number = Array.new(dices_number)
   end
 
   def display
-    self.roll
+    self.make_set
   end
 
 private
 
-  def roll
+  # function to return an array with the faces resulting of roll dice
+  def make_set
 
-    faces = []
+    set_faces = []
 
-    self.quantity.each do |dice| faces.push(dice = rand(6) + 1)
-    self.quantity[0] = dice
-    puts self.quantity[0]
+    self.dices_number.each do
+      dice = Dice.new
+      set_faces.push(dice.face)
     end
 
-    faces
+    set_faces
   end
 end

@@ -8,6 +8,6 @@
 
 require_relative 'classes/dice_set'
 
-first_game = DiceSet.new(2)
-p first_game
+first_game = DiceSet.new(4)
+
 print first_game.display
