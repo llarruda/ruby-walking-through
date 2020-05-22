@@ -24,3 +24,17 @@ end
 # statement modifiers are useful when the body of statement is only a single expression
 # behaves as do-while, at least once the subtraction will be realize
 puts number = number - 5 while number > 10
+
+count = 5
+loop do
+  break if count <= 0
+  puts count
+  count -= 1
+end
+
+cart = %w(banada orange watermelon)
+
+until cart.empty?
+  first = cart.shift
+  puts first
+end
