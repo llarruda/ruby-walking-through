@@ -19,7 +19,7 @@ printf "Your age is %d\n", age
 
 # large integer number representation
 amount = 1_200_450_300
-print amount, ' - ', amount.class, "\n"
+print amount, " - ", amount.class, "\n"
 
 # float
 pi = 3.14159
@@ -27,15 +27,15 @@ puts pi
 
 # large float number representation
 amount = 1_200_450_300.50
-print amount, ' - ', amount.class, "\n"
+print amount, " - ", amount.class, "\n"
 
 # string
-name = 'Leandro'
-print name, ' - ', name.class, "\n"
+name = "Leandro"
+print name, " - ", name.class, "\n"
 
-print 'Enter your last name: '
+print "Enter your last name: "
 last_name = gets.chomp
-print last_name, ' - ', last_name.class, "\n"
+print last_name, " - ", last_name.class, "\n"
 
 # interpolation of strings
 puts "My complete name is #{name} #{last_name}"
@@ -45,13 +45,13 @@ puts "The length of your name, #{name}, is #{name.length}, and the first letter 
 
 # boolean
 true_logic_value = 1 > 0
-print true_logic_value, ' - ', true_logic_value.class, "\n"
+print true_logic_value, " - ", true_logic_value.class, "\n"
 
 false_logic_value = false
-print false_logic_value, ' - ', false_logic_value.class, "\n"
+print false_logic_value, " - ", false_logic_value.class, "\n"
 
 # array
-fruit = ['lemmon', 'apple', 'watermelon', 'banana']
+fruit = ["lemmon", "apple", "watermelon", "banana"]
 puts fruit.inspect
 
 colors = %w(red green blue)
@@ -99,10 +99,44 @@ puts vector.class
 begin
   vector[] = 10
 rescue
-  puts 'You cannot assign a value to array without inform an index'
+  puts "You cannot assign a value to array without inform an index"
 end
 
 # with rescue fallback your vector var is safe
 p vector
 
 # hash
+
+# instantiate a hash
+properties = { color: "black", brand: "mercedes", price: 500_000.99 }
+
+# instantiate a empty hash
+grades = {}
+
+info = Hash.new
+
+# check which class the variables belongs
+puts "properties belongs to class -> #{properties.class}"
+
+puts "grades belongs to class  -> #{grades.class}"
+
+puts "info belongs to class -> #{info.class}"
+
+# inspect properties
+puts properties.inspect
+
+# shortcut for print the result of call of #inspect method
+p properties
+
+# check default return values of nonexistent keys
+p properties["nonexistent_key"]
+
+# changing default return values of nonexistent keys
+hash = Hash.new(0)
+
+p hash[:nonexistent_key]
+
+# add a new a element (key => value) to a existing hash
+properties[:type] = "muscle"
+
+p properties
