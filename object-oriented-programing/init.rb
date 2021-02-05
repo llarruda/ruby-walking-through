@@ -87,6 +87,10 @@ new_collection.each do |specie|
   puts specie
 end
 
+# set values in constructor class, passing hash options, result in not use default values defined internally
+chicken = AnimalKeepTrack.new({ noise: 'pruaww', color: 'red-painted-black' })
+p chicken
+
 # instance of WorkingWithTime
 today = WorkingWithTime.new
 tomorrow = today.add_days(1)
