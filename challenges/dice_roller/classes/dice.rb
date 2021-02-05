@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #
 #  Ruby Basic Object-Oriented Programming - Challenge of Ruby Classes and Modules - LinkedIn Learning
 #
@@ -6,21 +8,24 @@
 #
 #
 
+# Represents a unique exclusive dice
 class Dice
-
+  # Gets the value to dice's face
   attr_reader :face
 
+  # Initializes a dice with action of roll
   def initialize
-    self.roll
+    roll
   end
 
-private
+  private
 
-  def face=(value)
-    @face = value
-  end
+  # Sets a value to dice's face
+  attr_writer :face
 
+  # Generates pseudo-random number between [1..6] to set the value of dice's face
+  # @return [integer] face
   def roll
-    self.face = rand(6) + 1
+    self.face = rand(1..6)
   end
 end
